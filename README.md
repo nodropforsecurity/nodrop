@@ -24,6 +24,7 @@ NoDrop is tested on Ubuntu 18.04 with unmodified Linux kernel 4.15.0-171.
 ```shell
  source getmusl.sh
 ```
+
 #### Installation Instructions
 ```shell
 mkdir build && cd build
@@ -33,7 +34,6 @@ make load
 Then the kernel module is loaded. You can find the kernel module file called `nodrop.ko` in project root directory.
 
 ### Configuration
-
 In NoDrop, there are 3 variables can be configured with cmake.
 
 - `BUFFER_SIZE`: the size of each per-thread buffer (default value: 8MB)
@@ -55,7 +55,6 @@ cmake .. -DPATH_FORMAT=/dev/pts/1
 ```
 
 ### Pkey Support
-
 NoDrop utilizes Intel Protection Key (PKEY) to protect its memory. If your machine does not support pkey, you must disable it otherwise a SIGILL will triggered due to the illegel instruction used by pkey.
 
 This option is enabled on default. To disable the pkey, you can instruct CMake with `-DPKEY_SUPPORT=off`.
