@@ -13,16 +13,16 @@ NoDrop is tested on Ubuntu 18.04 with unmodified Linux kernel 4.15.0-171.
 #### Environment requirements
 * make
 * Ubuntu 18.04 (Linux Kernle >= 4.15.0-171) 
-* GCC/G++ > 4.8 (Linux) or Clang (for OSX)
+* GCC/G++ > 8.0 (Linux) which supports '--static-pie' option 
 * CMake > 2.8.2
 * libelf1 headers (package libelf-dev on Debian, elfutils-libelf-devel on Red-Hat)
 * pkg-config binary
 * For Linux, the following kernel options must be enabled (usually they are, unless a custom built kernel is used):
     *  `CONFIG_TRACEPOINTS`
     *  `CONFIG_HAVE_SYSCALL_TRACEPOINTS`
- * For Musl support, just run
+ * To get musl libc, just run the following command
 ```shell
- source getmusl.sh
+ ./getmusl.sh <absolute-path-to-Nodrop>
 ```
 
 #### Installation Instructions
