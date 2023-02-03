@@ -67,4 +67,3 @@ message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
 add_subdirectory(kmodule ${PROJECT_BINARY_DIR}/kmodule)
 add_subdirectory(monitor ${PROJECT_BINARY_DIR}/monitor)
-add_subdirectory(scripts ${PROJECT_BINARY_DIR}/scripts)
